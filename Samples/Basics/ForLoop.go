@@ -29,12 +29,13 @@ func main() {
 		fmt.Println("Breaking For Loop")
 		break
 	}
+	//You can also continue to the next iteration of the loop
 	fmt.Println("#### Out Put ####")
 	for i := 4; i <= 10; i++ {
-		if i%2 != 0 {
-			fmt.Println(i)
+		if i%2 == 0 {
+			continue
 		}
-
+		fmt.Println(i)
 	}
 
 }
