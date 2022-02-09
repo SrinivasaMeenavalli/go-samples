@@ -24,8 +24,12 @@ func main() {
 	*/
 
 	_, keyNotFound := m["Key1"]
-	fmt.Println("prs:", keyNotFound)
+	fmt.Println("keyFound?:", keyNotFound)
 
 	_, keyExisting := m["Key2"]
-	fmt.Println("prs:", keyExisting)
+	fmt.Println("keyFound?:", keyExisting)
+
+	newMap := map[string]int{"newKey1": 10, "newKey2": 12}
+	fmt.Println("prs:", newMap)
+
 }
