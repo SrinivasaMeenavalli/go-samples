@@ -1,5 +1,8 @@
 package main
 
+/**
+Functions are central in Go, Go requires explicit returns
+*/
 import "fmt"
 
 func main() {
@@ -23,6 +26,11 @@ func subtraction(a int, b int) int {
 	return a - b
 }
 
+/**
+When you have multiple consecutive parameters of
+the same type, you may omit the type name for the like-typed
+parameters up to the final parameter that declares the type
+*/
 func multiplication(a, b int) int {
 	return a * b
 }
