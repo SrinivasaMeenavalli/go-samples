@@ -34,7 +34,7 @@ func main() {
 	fmt.Println(&person{name: "Ann", age: 40})
 	fmt.Println(newPerson("Jon"))
 	s := person{name: "Sean", age: 50}
-	//ccess struct fields with a dot
+	//Access struct fields with a dot
 	fmt.Println(s.name)
 
 	sp := &s
