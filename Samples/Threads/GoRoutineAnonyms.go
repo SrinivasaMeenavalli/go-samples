@@ -12,6 +12,11 @@ func f(from string) {
 }
 func main() {
 	f("direct")
+	/**
+	Two function calls are running asynchronously
+	in separate goroutines now. Wait for them to finish
+	*/
+
 	go f("goroutine")
 	go func(msg string) {
 		fmt.Println(msg)
