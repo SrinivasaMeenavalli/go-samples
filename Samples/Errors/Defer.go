@@ -25,6 +25,10 @@ func writeFile(f *os.File) {
 	fmt.Println("writing")
 	fmt.Fprint(f, "data")
 }
+
+/*
+It’s important to check for errors when closing a file, even in a deferred function.
+*/
 func closeFile(f *os.File) {
 	fmt.Println("closing")
 	err := f.Close()
