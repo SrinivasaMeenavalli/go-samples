@@ -39,6 +39,11 @@ func main() {
 		"C#",
 	})
 
+	/*
+		If the data is a struct we can use the {{.FieldName}}
+		action to access its fields. The fields should be
+		exported to be accessible when a template is executing
+	*/
 	Create := func(name, t string) *template.Template {
 		return template.Must(template.New(name).Parse(t))
 
@@ -51,6 +56,7 @@ func main() {
 	t2.Execute(os.Stdout, map[string]string{
 		"Name": "Micky Mouse",
 	})
+	//if/else provide conditional execution for templates.
 	t3 := Create("t3",
 		"{{if . -}} yes {{else -}} no {{end}}\n")
 
@@ -58,6 +64,11 @@ func main() {
 	t3.Execute(os.Stdout, "")
 	t4 := Create("t4",
 		"Range: {{range .}}{{.}} {{end}}\n")
+	/*
+		range blocks let us loop through slices,
+		arrays, maps or channels.
+		Inside the range block {{.}} is set to the current item of the iteration
+	*/
 	t4.Execute(os.Stdout,
 		[]string{
 			"Go",
