@@ -15,12 +15,12 @@ func main() {
 	*/
 	sort.Strings(strs)
 	fmt.Println("Strings:", strs)
-	ints := []int{10, 398, 4, 87}
-	sort.Ints(ints)
-	fmt.Println("Ints", ints)
+	floats := []float64{10, 8001.12, 8000.0000345, 398, 8001, 4, 87, 8000}
+	sort.Float64s(floats)
+	fmt.Println("Ints", floats)
 	/*
 		We can also use sort to check if a slice is already in sorted order
 	*/
-	s := sort.IntsAreSorted(ints)
+	s := sort.Float64sAreSorted(floats)
 	fmt.Println("Sorted: ", s)
 }
