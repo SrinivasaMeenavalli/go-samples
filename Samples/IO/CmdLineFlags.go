@@ -10,6 +10,7 @@ basic command-line flag parsing For example,
  in wc -l the -l is a command-line flag
  Usage : go build CmdLineFlags.go
          .\CmdLineFlags.exe -word=opt -numb=7 -fork -svar=flag
+		 .\CmdLineFlags.exe -word=opt a1 a2 a3
 */
 func main() {
 	/*Declare a string flag word with a default value
