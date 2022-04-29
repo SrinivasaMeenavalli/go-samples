@@ -13,7 +13,7 @@ Sometimes we just want to completely replace
 
 */
 func main() {
-
+	//Exec also needs a set of environment variables to use
 	os.Setenv("PATH", `C:\Windows\System32`)
 	cmd := exec.Command("systeminfo.exe")
 	out, err := cmd.CombinedOutput()
